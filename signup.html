@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - JobHub Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm fixed w-full z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-bold text-blue-600">JobHub Pro</a>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="/jobs.html" class="text-gray-600 hover:text-blue-600">Jobs</a>
+                    <a href="/resume-builder.html" class="text-gray-600 hover:text-blue-600">Resume Builder</a>
+                    <a href="/resume-review.html" class="text-gray-600 hover:text-blue-600">Resume Review</a>
+                    <a href="/pricing.html" class="text-gray-600 hover:text-blue-600">Pricing</a>
+                </div>
+                <div class="hidden md:flex space-x-4">
+                    <a href="/signup.html" class="px-4 py-2 text-blue-600 hover:text-blue-700">Sign Up</a>
+                    <a href="/signup.html" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Get Started</a>
+                </div>
+                <button class="md:hidden text-gray-600">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="pt-24 min-h-screen">
+        <div class="container mx-auto px-4 py-8">
+            <div class="max-w-md mx-auto">
+                <!-- Sign Up Form -->
+                <div class="bg-white rounded-lg shadow-sm p-8">
+                    <div class="text-center mb-8">
+                        <h1 class="text-2xl font-bold mb-2">Create Your Account</h1>
+                        <p class="text-gray-600">Join thousands of professionals advancing their careers</p>
+                    </div>
+
+                    <!-- Social Sign Up -->
+                    <div class="space-y-4 mb-8">
+                        <button class="w-full px-4 py-3 border border-gray-300 rounded-lg flex items-center justify-center space-x-2 hover:bg-gray-50 transition">
+                            <img src="https://www.google.com/favicon.ico" alt="Google" class="w-5 h-5">
+                            <span>Continue with Google</span>
+                        </button>
+                        <button class="w-full px-4 py-3 border border-gray-300 rounded-lg flex items-center justify-center space-x-2 hover:bg-gray-50 transition">
+                            <i class="fab fa-linkedin text-[#0077b5]"></i>
+                            <span>Continue with LinkedIn</span>
+                        </button>
+                    </div>
+
+                    <div class="relative mb-8">
+                        <div class="absolute inset-0 flex items-center">
+                            <div class="w-full border-t border-gray-300"></div>
+                        </div>
+                        <div class="relative flex justify-center text-sm">
+                            <span class="px-2 bg-white text-gray-500">Or sign up with email</span>
+                        </div>
+                    </div>
+
+                    <form class="space-y-6">
+                        <!-- Full Name -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                            <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Enter your full name">
+                        </div>
+
+                        <!-- Email -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                            <input type="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Enter your email">
+                        </div>
+
+                        <!-- Password -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Password</label>
+                            <div class="relative">
+                                <input type="password" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Create a password">
+                                <button type="button" class="absolute right-3 top-2.5 text-gray-400 hover:text-gray-600">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <p class="mt-1 text-sm text-gray-500">Must be at least 8 characters long</p>
+                        </div>
+
+                        <!-- Account Type -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">I am a...</label>
+                            <div class="grid grid-cols-2 gap-4">
+                                <label class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-blue-500">
+                                    <input type="radio" name="account-type" class="text-blue-600" checked>
+                                    <span class="ml-2">Job Seeker</span>
+                                </label>
+                                <label class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-blue-500">
+                                    <input type="radio" name="account-type" class="text-blue-600">
+                                    <span class="ml-2">Employer</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Terms -->
+                        <div class="flex items-start">
+                            <input type="checkbox" required class="mt-1 text-blue-600">
+                            <label class="ml-2 text-sm text-gray-600">
+                                I agree to the <a href="#" class="text-blue-600 hover:underline">Terms of Service</a> and <a href="#" class="text-blue-600 hover:underline">Privacy Policy</a>
+                            </label>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="w-full px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                            Create Account
+                        </button>
+                    </form>
+
+                    <!-- Sign In Link -->
+                    <p class="text-center mt-6 text-gray-600">
+                        Already have an account? <a href="#" class="text-blue-600 hover:underline">Sign in</a>
+                    </p>
+                </div>
+
+                <!-- Features -->
+                <div class="mt-12">
+                    <h2 class="text-center text-lg font-semibold mb-6">Why Choose JobHub Pro?</h2>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center">
+                            <div class="mb-2">
+                                <i class="fas fa-robot text-2xl text-blue-600"></i>
+                            </div>
+                            <h3 class="font-medium mb-1">AI-Powered Tools</h3>
+                            <p class="text-sm text-gray-600">Smart resume analysis and job matching</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="mb-2">
+                                <i class="fas fa-briefcase text-2xl text-blue-600"></i>
+                            </div>
+                            <h3 class="font-medium mb-1">Exclusive Jobs</h3>
+                            <p class="text-sm text-gray-600">Access to premium job listings</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="mb-2">
+                                <i class="fas fa-file-alt text-2xl text-blue-600"></i>
+                            </div>
+                            <h3 class="font-medium mb-1">Pro Templates</h3>
+                            <p class="text-sm text-gray-600">Professional resume templates</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="mb-2">
+                                <i class="fas fa-headset text-2xl text-blue-600"></i>
+                            </div>
+                            <h3 class="font-medium mb-1">Expert Support</h3>
+                            <p class="text-sm text-gray-600">Dedicated career guidance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4">JobHub Pro</h3>
+                    <p class="text-sm">AI-powered career tools to help you succeed in your professional journey.</p>
+                </div>
+                <div>
+                    <h4 class="text-white text-sm font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/jobs.html" class="hover:text-white">Find Jobs</a></li>
+                        <li><a href="/resume-builder.html" class="hover:text-white">Resume Builder</a></li>
+                        <li><a href="/resume-review.html" class="hover:text-white">Resume Review</a></li>
+                        <li><a href="/pricing.html" class="hover:text-white">Pricing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white text-sm font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white">Blog</a></li>
+                        <li><a href="#" class="hover:text-white">Career Advice</a></li>
+                        <li><a href="#" class="hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white text-sm font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-white"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="hover:text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-sm text-center">
+                <p>&copy; 2024 JobHub Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple JavaScript for password visibility toggle -->
+    <script>
+        const togglePassword = document.querySelector('.fa-eye');
+        const password = document.querySelector('input[type="password"]');
+
+        togglePassword.addEventListener('click', function() {
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            this.classList.toggle('fa-eye');
+            this.classList.toggle('fa-eye-slash');
+        });
+    </script>
+</body>
+</html>
